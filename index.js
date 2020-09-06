@@ -33,7 +33,7 @@ app.post('/webhook', (req, res) => {
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
   // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = 'ILOVEPIZZA';
+  let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
   // Parse the query params
   let mode = req.query['hub.mode'];
